@@ -1,0 +1,190 @@
+---
+layout: "base.njk"
+title: "Documentation — WefficientIT"
+---
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <p class="section-eyebrow">Ressources techniques</p>
+    <h1 class="page-hero__title" id="page-title">Base documentaire</h1>
+    <p class="page-hero__lead">
+      Guides techniques, procédures et tutoriels autour des solutions Open Source.
+      Un contenu utile, concret, rédigé pour être appliqué.
+    </p>
+  </div>
+</section>
+
+<!-- Catégories -->
+<section class="section" aria-labelledby="categories-title">
+  <div class="container">
+
+    <div class="section__header reveal">
+      <p class="section-eyebrow">Catégories</p>
+      <h2 id="categories-title">Parcourir par technologie</h2>
+    </div>
+
+    <div class="grid grid--4 reveal">
+
+      <a href="#glpi" class="doc-category" aria-label="Documentation GLPI">
+        <div class="doc-category__icon" aria-hidden="true">
+          <i class="ti ti-device-desktop"></i>
+        </div>
+        <h3 class="doc-category__title">GLPI</h3>
+        <p class="doc-category__desc">Installation, migration, ticketing, inventaire automatique et configuration avancée.</p>
+      </a>
+
+      <a href="#debian" class="doc-category" aria-label="Documentation Debian Linux">
+        <div class="doc-category__icon" aria-hidden="true">
+          <i class="ti ti-terminal"></i>
+        </div>
+        <h3 class="doc-category__title">Debian / Linux</h3>
+        <p class="doc-category__desc">Durcissement, optimisation, gestion des services et bonnes pratiques système.</p>
+      </a>
+
+      <a href="#ansible" class="doc-category" aria-label="Documentation Ansible">
+        <div class="doc-category__icon" aria-hidden="true">
+          <i class="ti ti-robot"></i>
+        </div>
+        <h3 class="doc-category__title">Ansible</h3>
+        <p class="doc-category__desc">Playbooks, rôles, Semaphore et infrastructure as code.</p>
+      </a>
+
+      <a href="#proxmox" class="doc-category" aria-label="Documentation Proxmox">
+        <div class="doc-category__icon" aria-hidden="true">
+          <i class="ti ti-cpu"></i>
+        </div>
+        <h3 class="doc-category__title">Proxmox</h3>
+        <p class="doc-category__desc">Virtualisation, LXC, KVM, sauvegardes et architecture réseau.</p>
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Section GLPI -->
+<section class="section section--alt" id="glpi" aria-labelledby="glpi-title">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section-eyebrow">GLPI</p>
+      <h2 id="glpi-title">Gestion de parc et ticketing</h2>
+    </div>
+    <div class="doc-list reveal" role="list">
+      <a href="/documentation/glpi-installation-debian/" class="doc-list__item" role="listitem">
+        <div class="doc-list__meta">
+          <span class="badge badge--orange" style="margin-right: var(--sp-3);">GLPI</span>
+          <span class="doc-list__title">Installer GLPI sur Debian 12 avec Nginx et MariaDB</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--sp-4);">
+          <span class="doc-list__date">Juin 2025</span>
+          <svg class="doc-list__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </a>
+      <a href="/documentation/glpi-agent-inventaire/" class="doc-list__item" role="listitem">
+        <div class="doc-list__meta">
+          <span class="badge badge--orange" style="margin-right: var(--sp-3);">GLPI</span>
+          <span class="doc-list__title">Configurer l'inventaire automatique avec GLPI Agent</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--sp-4);">
+          <span class="doc-list__date">Juin 2025</span>
+          <svg class="doc-list__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Debian -->
+<section class="section" id="debian" aria-labelledby="debian-title">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section-eyebrow">Debian / Linux</p>
+      <h2 id="debian-title">Serveurs sécurisés et optimisés</h2>
+    </div>
+    <div class="doc-list reveal" role="list">
+      <a href="/documentation/debian-durcissement-ssh/" class="doc-list__item" role="listitem">
+        <div class="doc-list__meta">
+          <span class="badge badge--neutral" style="margin-right: var(--sp-3);">Debian</span>
+          <span class="doc-list__title">Durcir SSH sur Debian : configuration minimale et sécurisée</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--sp-4);">
+          <span class="doc-list__date">Juin 2025</span>
+          <svg class="doc-list__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </a>
+      <a href="/documentation/debian-sauvegardes-borg/" class="doc-list__item" role="listitem">
+        <div class="doc-list__meta">
+          <span class="badge badge--neutral" style="margin-right: var(--sp-3);">Debian</span>
+          <span class="doc-list__title">Mettre en place des sauvegardes automatisées avec BorgBackup</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--sp-4);">
+          <span class="doc-list__date">Juin 2025</span>
+          <svg class="doc-list__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Ansible -->
+<section class="section section--alt" id="ansible" aria-labelledby="ansible-title">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section-eyebrow">Ansible</p>
+      <h2 id="ansible-title">Infrastructure as Code</h2>
+    </div>
+    <div class="doc-list reveal" role="list">
+      <a href="/documentation/ansible-premiers-pas/" class="doc-list__item" role="listitem">
+        <div class="doc-list__meta">
+          <span class="badge badge--neutral" style="margin-right: var(--sp-3);">Ansible</span>
+          <span class="doc-list__title">Premiers pas avec Ansible : inventaire, playbook et exécution</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--sp-4);">
+          <span class="doc-list__date">Juin 2025</span>
+          <svg class="doc-list__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </a>
+      <a href="/documentation/semaphore-installation/" class="doc-list__item" role="listitem">
+        <div class="doc-list__meta">
+          <span class="badge badge--neutral" style="margin-right: var(--sp-3);">Ansible</span>
+          <span class="doc-list__title">Installer et configurer Semaphore pour piloter Ansible sans CLI</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--sp-4);">
+          <span class="doc-list__date">Juin 2025</span>
+          <svg class="doc-list__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Proxmox -->
+<section class="section" id="proxmox" aria-labelledby="proxmox-title">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section-eyebrow">Proxmox</p>
+      <h2 id="proxmox-title">Virtualisation Open Source</h2>
+    </div>
+    <div class="doc-list reveal" role="list">
+      <a href="/documentation/proxmox-installation-configuration/" class="doc-list__item" role="listitem">
+        <div class="doc-list__meta">
+          <span class="badge badge--neutral" style="margin-right: var(--sp-3);">Proxmox</span>
+          <span class="doc-list__title">Installer et configurer Proxmox VE sur un serveur dédié</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--sp-4);">
+          <span class="doc-list__date">Juin 2025</span>
+          <svg class="doc-list__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </a>
+      <a href="/documentation/proxmox-sauvegardes-pbs/" class="doc-list__item" role="listitem">
+        <div class="doc-list__meta">
+          <span class="badge badge--neutral" style="margin-right: var(--sp-3);">Proxmox</span>
+          <span class="doc-list__title">Configurer les sauvegardes automatiques avec Proxmox Backup Server</span>
+        </div>
+        <div style="display:flex;align-items:center;gap:var(--sp-4);">
+          <span class="doc-list__date">Juin 2025</span>
+          <svg class="doc-list__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>

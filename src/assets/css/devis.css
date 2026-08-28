@@ -1,0 +1,485 @@
+/* =========================================================================
+    RESET MINIMAL
+    ========================================================================= */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================================================================
+    BASE DOCUMENT
+    ========================================================================= */
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-sans);
+    font-size: 0.9375rem; /* 15px — légèrement réduit pour document imprimé */
+    font-weight: var(--fw-regular);
+    line-height: 1.6;
+    color: var(--txt-primary);
+    background: var(--clr-gray-light);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* =========================================================================
+    PAGE IMPRIMABLE — Feuille A4
+    ========================================================================= */
+.page {
+    width: 210mm;
+    min-height: 297mm;
+    margin: 2rem auto;
+    background: var(--clr-white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+}
+
+/* =========================================================================
+    EN-TÊTE
+    ========================================================================= */
+.doc-header {
+    padding: 2.5rem 3rem 2rem;
+    border-bottom: 1px solid var(--brd-default);
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 2rem;
+}
+
+/* Logo texte — identique au site */
+.logo {
+    font-size: 1.5rem;
+    font-weight: var(--fw-bold);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.logo-w {
+    color: var(--clr-orange);
+}
+
+.logo-rest {
+    color: var(--txt-primary);
+}
+
+.doc-header__tagline {
+    font-size: 0.8125rem;
+    color: var(--txt-secondary);
+    font-weight: var(--fw-medium);
+    margin-top: 0.25rem;
+}
+
+.doc-header__contact {
+    font-size: 0.8125rem;
+    color: var(--txt-secondary);
+    line-height: 1.8;
+    text-align: right;
+}
+
+.doc-header__contact a {
+    color: var(--clr-orange-text);
+    text-decoration: none;
+}
+
+/* =========================================================================
+    BANDEAU TITRE DU DOCUMENT
+    ========================================================================= */
+.doc-title-band {
+    background: var(--clr-orange);
+    padding: 1.25rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.doc-title-band__label {
+    font-size: 1.25rem;
+    font-weight: var(--fw-bold);
+    color: #ffffff;
+    letter-spacing: -0.02em;
+}
+
+.doc-title-band__meta {
+    font-size: 0.8125rem;
+    font-weight: var(--fw-medium);
+    color: rgba(255,255,255,0.85);
+    text-align: right;
+    line-height: 1.7;
+}
+
+#doc-title-band__num {
+    font-size: 0.75rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.125rem;
+}
+
+/* =========================================================================
+    CORPS DU DOCUMENT
+    ========================================================================= */
+.doc-body {
+    padding: 2.5rem 3rem;
+}
+
+/* =========================================================================
+    BLOC PARTIES (Émetteur / Destinataire)
+    ========================================================================= */
+.doc-parties {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.party {
+    background: var(--bg-surface);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem 1.5rem;
+}
+
+.party__label {
+    font-size: 0.6875rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-orange);
+    margin-bottom: 0.75rem;
+}
+
+.party__name {
+    font-size: 1rem;
+    font-weight: var(--fw-semibold);
+    color: var(--txt-primary);
+    margin-bottom: 0.25rem;
+}
+
+.party__detail {
+    font-size: 0.8125rem;
+    color: var(--txt-secondary);
+    line-height: 1.7;
+}
+
+/* =========================================================================
+    OBJET DU DEVIS
+    ========================================================================= */
+.doc-object {
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--brd-default);
+}
+
+.doc-object__label {
+    font-size: 0.6875rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--txt-tertiary);
+    margin-bottom: 0.4rem;
+}
+
+.doc-object__text {
+    font-size: 1.0625rem;
+    font-weight: var(--fw-semibold);
+    color: var(--txt-primary);
+}
+
+/* =========================================================================
+    TABLEAU DES PRESTATIONS
+    ========================================================================= */
+.doc-section-title {
+    font-size: 0.6875rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--txt-tertiary);
+    margin-bottom: 0.75rem;
+}
+
+.prestations-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.prestations-table thead tr {
+    background: var(--clr-anthracite);
+    color: #ffffff;
+}
+
+.prestations-table thead th {
+    padding: 0.75rem 1rem;
+    font-size: 0.75rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.04em;
+    text-align: left;
+}
+
+.prestations-table thead th:last-child,
+.prestations-table thead th:nth-last-child(2),
+.prestations-table thead th:nth-last-child(3) {
+    text-align: right;
+}
+
+.prestations-table tbody tr {
+    border-bottom: 1px solid var(--brd-default);
+    transition: background 0.1s;
+}
+
+.prestations-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.prestations-table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.prestations-table td {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    color: var(--txt-primary);
+    vertical-align: top;
+}
+
+.prestations-table td:last-child,
+.prestations-table td:nth-last-child(2),
+.prestations-table td:nth-last-child(3) {
+    text-align: right;
+    white-space: nowrap;
+}
+
+.prestations-table .td-desc {
+    color: var(--txt-secondary);
+    font-size: 0.8125rem;
+    margin-top: 0.2rem;
+    line-height: 1.5;
+}
+
+/* =========================================================================
+    TOTAUX
+    ========================================================================= */
+.totaux-wrapper {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 2.5rem;
+}
+
+.totaux {
+    width: 280px;
+}
+
+.totaux__row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--brd-default);
+    font-size: 0.875rem;
+}
+
+.totaux__row:last-child {
+    border-bottom: none;
+}
+
+.totaux__label {
+    color: var(--txt-secondary);
+}
+
+.totaux__value {
+    font-weight: var(--fw-semibold);
+    color: var(--txt-primary);
+}
+
+.totaux__row--ttc {
+    padding: 0.875rem 1rem;
+    background: var(--clr-anthracite);
+    border-radius: var(--radius-md);
+    margin-top: 0.5rem;
+    border-bottom: none;
+}
+
+.totaux__row--ttc .totaux__label {
+    color: rgba(255,255,255,0.75);
+    font-weight: var(--fw-semibold);
+    font-size: 0.875rem;
+}
+
+.totaux__row--ttc .totaux__value {
+    color: var(--clr-orange);
+    font-size: 1.25rem;
+    font-weight: var(--fw-bold);
+}
+
+/* =========================================================================
+    CONDITIONS ET REMARQUES
+    ========================================================================= */
+.doc-conditions {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--brd-default);
+}
+
+.condition-block__title {
+    font-size: 0.6875rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--clr-orange);
+    margin-bottom: 0.5rem;
+}
+
+.condition-block__text {
+    font-size: 0.8125rem;
+    color: var(--txt-secondary);
+    line-height: 1.7;
+}
+
+/* =========================================================================
+    REMARQUES TECHNIQUES (optionnel)
+    ========================================================================= */
+.doc-note {
+    background: var(--clr-orange-light);
+    border-left: 3px solid var(--clr-orange);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 1rem 1.25rem;
+    margin-bottom: 2.5rem;
+}
+
+.doc-note__title {
+    font-size: 0.75rem;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--clr-orange-text);
+    margin-bottom: 0.375rem;
+}
+
+.doc-note__text {
+    font-size: 0.8125rem;
+    color: var(--clr-orange-text);
+    line-height: 1.65;
+}
+
+/* =========================================================================
+    BLOC SIGNATURE
+    ========================================================================= */
+.doc-signature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--brd-default);
+}
+
+.signature-block__label {
+    font-size: 0.75rem;
+    color: var(--txt-secondary);
+    margin-bottom: 4rem;
+}
+
+.signature-block__line {
+    border-bottom: 1px solid var(--clr-gray-border);
+    margin-bottom: 0.5rem;
+}
+
+.signature-block__hint {
+    font-size: 0.75rem;
+    color: var(--txt-tertiary);
+}
+
+/* =========================================================================
+    PIED DE PAGE
+    ========================================================================= */
+.doc-footer {
+    background: var(--clr-anthracite);
+    padding: 1rem 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.doc-footer__brand {
+    font-size: 0.75rem;
+    font-weight: var(--fw-semibold);
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 0.04em;
+}
+
+.doc-footer__brand span {
+    color: var(--clr-orange);
+}
+
+.doc-footer__legal {
+    font-size: 0.6875rem;
+    color: rgba(255,255,255,0.35);
+    text-align: right;
+    line-height: 1.6;
+}
+
+/* =========================================================================
+    CALCUL AUTOMATIQUE — Affichage des valeurs calculées
+    ========================================================================= */
+/* [data-total], [data-ht], [data-tva], [data-ttc] { */
+    /* Ces attributs sont lus par le script de calcul */
+/* } */
+
+/* =========================================================================
+    IMPRESSION @media print
+    ========================================================================= */
+@media print {
+    body {
+    background: white;
+    font-size: 11pt;
+    }
+
+    .page {
+    width: 100%;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    min-height: 0;
+    }
+
+    .doc-header,
+    .doc-body {
+    padding-left: 2cm;
+    padding-right: 2cm;
+    }
+
+    .doc-title-band {
+    padding-left: 2cm;
+    padding-right: 2cm;
+    }
+
+    .doc-footer {
+    padding-left: 2cm;
+    padding-right: 2cm;
+    }
+
+    /* Éviter les coupures malheureuses */
+    .doc-parties,
+    .prestations-table,
+    .totaux-wrapper,
+    .doc-conditions,
+    .doc-signature {
+    page-break-inside: avoid;
+    }
+
+    .prestations-table thead {
+    display: table-header-group; /* répète l'entête sur chaque page */
+    }
+
+    a {
+    text-decoration: none;
+    color: inherit;
+    }
+}

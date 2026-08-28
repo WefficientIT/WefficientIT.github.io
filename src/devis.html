@@ -1,0 +1,235 @@
+---
+layout: "baseWithoutHeader.njk"
+title: "Devis — WefficientIT"
+---
+<link rel="stylesheet" href="/assets/css/devis.css">
+<style>input {all: unset;}</style>
+<div class="page">
+
+  <!-- ===== EN-TÊTE =========================================================== -->
+  <header class="doc-header">
+    <div>
+      <div class="logo">
+        <span class="logo-w">W</span><span class="logo-rest">efficientIT</span>
+      </div>
+      <p class="doc-header__tagline">Intégrateur Linux Open Source</p>
+    </div>
+    <div class="doc-header__contact">
+      Meven BOONE<br>
+      SARL — SIRET : 428 938 500 00033<br>
+      <a href="mailto:contact-it@wefficient.com">contact-it@wefficient.com</a><br>
+      <a href="https://it.wefficient.com">it.wefficient.com</a>
+    </div>
+  </header>
+
+  <!-- ===== BANDEAU TITRE ===================================================== -->
+  <div class="doc-title-band">
+    <span class="doc-title-band__label">Devis</span>
+    <div class="doc-title-band__meta">
+      <div id="doc-title-band__num">
+        DEVIS
+      </div>
+      Émis le : <span id="dateEmission">01 janvier 2000</span><br>
+      Valable jusqu'au : <span id="dateValidite">01 février 2000</span>
+    </div>
+  </div>
+
+  <!-- ===== CORPS ============================================================= -->
+  <div class="doc-body">
+
+    <!-- Parties -->
+    <div class="doc-parties">
+      <div class="party">
+        <p class="party__label">Prestataire</p>
+        <p class="party__name">WefficientIT</p>
+        <p class="party__detail">
+          Meven BOONE<br>
+          15 rue du Plénéno<br>
+          56100, Lorient<br>
+          SIRET : 428 938 500 00033<br>
+          APE / NAF : XXXX
+        </p>
+      </div>
+      <div class="party">
+        <p class="party__label">Client (à compléter)</p>
+        <!-- <input type="text" class="party__label" value="Client (à compléter)" style="all: unset;font-size: 0.6875rem;letter-spacing: 0.1em;font-weight: var(--fw-semibold);text-transform: uppercase;color: var(--clr-orange);margin-bottom: 0.75rem;"> -->
+        <input type="text" class="p party__name" value="Nom de l'entreprise">
+        <p class="party__detail">
+          <input type="text" value="Nom du contact" class="party__detail"><br>
+          <input type="text" value="Adresse complète" class="party__detail"><br>
+          <input type="text" value="Code postal, Ville" class="party__detail"><br>
+          SIRET : <input type="text" value="SIRET client" class="party__detail">
+        </p>
+      </div>
+    </div>
+
+    <div class="doc-object">
+      <p class="doc-object__label">Objet</p>
+      <p class="doc-object__text" id="objet">Objet</p>
+    </div>
+
+    <div class="doc-note">
+      <p class="doc-note__title">Note technique</p>
+      <p class="doc-note__text">
+        La migration sera réalisée hors des heures de production. L'infrastructure cible sera documentée
+        et livrée avec un guide administrateur ET utilisateur. Toutes les interventions sont effectuées à distance
+        via connexion sécurisée.
+      </p>
+    </div>
+
+    <!-- Tableau des prestations -->
+    <p class="doc-section-title">Détail des prestations</p>
+    <table class="prestations-table" id="table-prestations">
+      <thead>
+        <tr>
+          <th style="width: 40%">Prestation</th>
+          <th style="width: 30%">Description</th>
+          <th style="width: 10%">Qté</th>
+          <th style="width: 10%">P.U. HT</th>
+          <th style="width: 10%">Total HT</th>
+        </tr>
+      </thead>
+      <tbody id="tableDevis">
+
+      </tbody>
+    </table>
+
+    <!-- Totaux -->
+    <div class="totaux-wrapper">
+      <div class="totaux">
+        <div class="totaux__row">
+          <span class="totaux__label">Total HT</span>
+          <span class="totaux__value" id="total-ht">0,00 €</span>
+        </div>
+        <div class="totaux__row">
+          <span class="totaux__label">TVA (20 %)</span>
+          <span class="totaux__value" id="total-tva">0,00 €</span>
+        </div>
+        <div class="totaux__row totaux__row--ttc">
+          <span class="totaux__label">Total TTC</span>
+          <span class="totaux__value" id="total-ttc">0,00 €</span>
+        </div>
+        <!-- ✏️  Si franchise de TVA, décommenter la ligne suivante et supprimer les lignes TVA/TTC ci-dessus -->
+        <!--
+        <div class="totaux__row">
+          <span class="totaux__label" style="font-size:0.75rem; color:var(--txt-tertiary)">
+            TVA non applicable — art. 293 B du CGI
+          </span>
+        </div>
+        -->
+      </div>
+    </div>
+
+    <!-- Conditions -->
+    <div class="doc-conditions">
+      <div class="condition-block">
+        <p class="condition-block__title">Modalités de règlement</p>
+        <p class="condition-block__text">
+          <!-- ✏️  Adapter selon tes conditions -->
+          Acompte de 30 % à la signature du devis.<br>
+          Solde à la livraison.<br>
+          Règlement par virement bancaire sous 30 jours.<br>
+          IBAN fourni à la signature du devis
+        </p>
+      </div>
+      <div class="condition-block">
+        <p class="condition-block__title">Conditions générales</p>
+        <p class="condition-block__text">
+          <!-- ✏️  Adapter selon tes CGV -->
+          Devis valable 30 jours à compter de la date d'émission.<br>
+          La documentation est livrée avec chaque prestation.<br>
+          Délai d'exécution estimé : à convenir après signature.
+        </p>
+      </div>
+    </div>
+
+    <!-- Signature -->
+    <div class="doc-signature">
+      <div class="signature-block">
+        <p class="signature-block__label">Bon pour accord — Client</p>
+        <div class="signature-block__line"></div>
+        <p class="signature-block__hint">Signature et cachet entreprise</p>
+      </div>
+      <div class="signature-block">
+        <p class="signature-block__label">WefficientIT — Prestataire</p>
+        <div class="signature-block__line"></div>
+        <p class="signature-block__hint">Signature</p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="doc-footer">
+    <div class="doc-footer__brand">
+      <span>W</span>efficientIT — Intégrateur Linux Open Source
+    </div>
+    <div class="doc-footer__legal">
+      SARL — SIRET : 428 938 500 00033<br>
+      En cas de litige : tribunal compétent de Lorient
+    </div>
+  </footer>
+</div>
+<center>
+  <a
+    href="/devis/"
+    class="btn btn--primary"
+    style="width: 20%; justify-content: center; margin-bottom: 25px;"
+    id="cfg-cta"
+    aria-label="Imprimer ce devis"
+    onclick="document.getElementById('cfg-cta').remove();window.print();"
+  >
+    Imprimer ce devis
+    <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+    </svg>
+  </a>
+</center>
+
+<!-- =========================================================================
+     SCRIPT DE CALCUL AUTOMATIQUE
+     Recalcule HT, TVA (20%) et TTC à chaque chargement.
+     Modifier le taux de TVA ligne "const TVA_RATE" si besoin.
+     Si franchise de TVA : mettre TVA_RATE = 0
+     ========================================================================= -->
+<script>
+  const TVA_RATE = 0.20;
+
+  function parseEuro(str) {
+    return parseFloat(str.replace(/\s/g, '').replace('€', '').replace(',', '.')) || 0;
+  }
+
+  function formatEuro(num) {
+    return num.toLocaleString('fr-FR', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+  }
+
+  function recalculate() {
+    const rows = document.querySelectorAll('#table-prestations tbody tr');
+    let totalHT = 0;
+
+    rows.forEach(row => {
+      const qtyEl  = row.querySelector('.td-qty');
+      const puEl   = row.querySelector('.td-pu');
+      const totEl  = row.querySelector('.td-total');
+
+      if (!qtyEl || !puEl || !totEl) return;
+
+      const qty    = parseFloat(qtyEl.textContent.trim().replace(',', '.')) || 0;
+      const pu     = parseEuro(puEl.textContent);
+      const ligneTotal = qty * pu;
+
+      totEl.textContent = formatEuro(ligneTotal);
+      totalHT += ligneTotal;
+    });
+
+    const tva = totalHT * TVA_RATE;
+    const ttc = totalHT + tva;
+
+    document.getElementById('total-ht').textContent  = formatEuro(totalHT);
+    document.getElementById('total-tva').textContent = formatEuro(tva);
+    document.getElementById('total-ttc').textContent = formatEuro(ttc);
+  }
+
+  document.addEventListener('DOMContentLoaded', recalculate);
+</script>
+<script src="/assets/js/data.js" defer></script>
+<script src="/assets/js/devis.js" defer></script>
+<!-- <script>window.print();</script> -->

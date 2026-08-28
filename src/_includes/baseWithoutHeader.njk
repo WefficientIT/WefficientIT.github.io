@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>{{ title }}</title>
+  <meta name="description" content="WefficientIT déploie des infrastructures Linux modernes pour les PME : GLPI, Debian, Proxmox, Ansible. Forfait fixe, documentation incluse, migrations hors production.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://it.wefficient.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://it.wefficient.com/">
+  <meta property="og:title" content="WefficientIT — Intégrateur Linux Open Source pour PME">
+  <meta property="og:description" content="Infrastructure Linux moderne. Forfait fixe, documentation incluse, migrations hors production.">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Préchargement de la police -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icônes Tabler -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Favicon (placeholder — à remplacer) -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+</head>
+<body>
+  <main id="main-content">
+    {{ content | safe }}
+  </main>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>{{ title }}</title>
+  <meta name="description" content="WefficientIT déploie des infrastructures Linux modernes pour les PME : GLPI, Debian, Proxmox, Ansible. Forfait fixe, documentation incluse, migrations hors production.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://it.wefficient.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://it.wefficient.com/">
+  <meta property="og:title" content="WefficientIT — Intégrateur Linux Open Source pour PME">
+  <meta property="og:description" content="Infrastructure Linux moderne. Forfait fixe, documentation incluse, migrations hors production.">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Préchargement de la police -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icônes Tabler -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Favicon (placeholder — à remplacer) -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+  {% include "header.html" %}
+
+  <section class="section state" aria-labelledby="state-title">
+    <div class="container">
+      <div class="state__content reveal">
+
+        <img
+          src="/assets/images/site_en_construction.png"
+          alt="Pingouin Linux avec un plot de chantier, illustrant une page en cours de construction"
+          class="state__visual"
+        >
+
+        <h1 class="state__title" id="state-title">404 Page inexistante</h1>
+
+        <p class="state__body lead">
+          Il semblerait que la page que vous recherchez n'existe pas.
+          Pensez à vérifier que le lien renseigné est le bon.
+        </p>
+
+        <div class="state__actions">
+          <a href="/contact/" class="btn btn--primary btn--lg">
+            Me contacter
+            <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+            </svg>
+          </a>
+          <a href="/" class="btn btn--outline btn--lg">
+            Retour à l'accueil
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  {% include "footer.html" %}
+
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>
+<!--
+  Page "en construction"
+  =======================
+  Deux usages prévus pour ce même gabarit :
+
+  1) Page 404 du site (remplace le 404 brut du navigateur)
+     - Copier ce fichier en 404.html à la racine du projet Eleventy.
+     - Ajouter `permalink: "404.html"` dans le front matter ci-dessus, pour
+       obtenir une sortie /404.html (et non /404/index.html).
+     - Configurer Nginx pour qu'il serve ce fichier sur toute route inconnue,
+       en conservant le code HTTP 404 (important pour le SEO) :
+         error_page 404 /404.html;
+         location = /404.html { internal; }
+
+  2) Page de secours pour une solution pas encore rédigée
+     (ex. /solutions/virtualisation/index.html)
+     - Dupliquer ce fichier vers l'URL de la solution concernée.
+     - Adapter le <title> et, si besoin, personnaliser le paragraphe pour
+       nommer la solution en question.
+-->

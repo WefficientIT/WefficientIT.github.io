@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- SEO -->
+  <title>Automatisation d&#39;infrastructure — WefficientIT</title>
+  <meta name="description" content="WefficientIT déploie des infrastructures Linux modernes pour les PME : GLPI, Debian, Proxmox, Ansible. Forfait fixe, documentation incluse, migrations hors production.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://it.wefficient.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://it.wefficient.com/">
+  <meta property="og:title" content="WefficientIT — Intégrateur Linux Open Source pour PME">
+  <meta property="og:description" content="Infrastructure Linux moderne. Forfait fixe, documentation incluse, migrations hors production.">
+  <meta property="og:locale" content="fr_FR">
+
+  <!-- Préchargement de la police -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icônes Tabler -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Favicon (placeholder — à remplacer) -->
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+</head>
+<body>
+  <header>
+<nav class="nav" role="navigation" aria-label="Navigation principale">
+    <div class="container">
+    <div class="nav__inner">
+
+        <a href="/" class="nav__logo" aria-label="WefficientIT — Accueil">
+        <span class="nav__logo-w">W</span><span class="nav__logo-rest">efficientIT</span>
+        </a>
+
+        <ul class="nav__links" role="list">
+        <li><a href="/solutions/" class="nav__link">Solutions</a></li>
+        <li><a href="/methode/" class="nav__link">Méthode</a></li>
+        <li><a href="/documentation/" class="nav__link">Documentation</a></li>
+        <li><a href="/contact/" class="nav__link">Contact</a></li>
+        </ul>
+
+        <a href="/contact/" class="btn btn--primary btn--sm nav__cta">
+        Demander un devis
+        </a>
+
+        <button
+        class="nav__burger"
+        aria-label="Ouvrir le menu"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        >
+        <span></span>
+        <span></span>
+        <span></span>
+        </button>
+
+    </div>
+    </div>
+</nav>
+
+<!-- Menu mobile -->
+<div class="nav__mobile" id="mobile-menu" role="dialog" aria-label="Menu de navigation">
+    <a href="/solutions/" class="nav__mobile-link">Solutions</a>
+    <a href="/methode/" class="nav__mobile-link">Méthode</a>
+    <a href="/documentation/" class="nav__mobile-link">Documentation</a>
+    <a href="/contact/" class="nav__mobile-link">Contact</a>
+    <div class="nav__mobile-cta">
+    <a href="/contact/" class="btn btn--primary btn--lg" style="width:100%; justify-content:center;">
+        Demander un devis
+    </a>
+    </div>
+</div>
+</header>
+<div class="nav-spacer" aria-hidden="true"></div>
+  <main id="main-content">
+    <section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Fil d'ariane">
+      <span class="breadcrumb__item"><a href="/">Accueil</a></span>
+      <span class="breadcrumb__sep" aria-hidden="true">›</span>
+      <span class="breadcrumb__item"><a href="/solutions/">Solutions</a></span>
+      <span class="breadcrumb__sep" aria-hidden="true">›</span>
+      <span class="breadcrumb__item breadcrumb__item--current">Automatisation</span>
+    </nav>
+    <p class="section-eyebrow">Solution</p>
+    <h1 class="page-hero__title" id="page-title">Déployez votre infrastructure en quelques minutes, toujours identique</h1>
+    <p class="page-hero__lead">
+      Des configurations reproductibles, versionnées et pilotées sans ligne de commande.
+      L'automatisation comme standard, pas comme luxe.
+    </p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="problem-title">
+  <div class="container" style="max-width:860px;">
+    <div class="reveal">
+      <p class="section-eyebrow">Le problème</p>
+      <h2 id="problem-title">Reconfigurer manuellement, c'est recommencer depuis zéro</h2>
+      <p style="margin-top: var(--sp-4);">
+        Chaque fois qu'un serveur doit être reconfiguré, les mêmes risques apparaissent :
+        un oubli, une variation d'une machine à l'autre, des heures perdues à retrouver
+        comment c'était fait la dernière fois.
+      </p>
+      <p style="margin-top: var(--sp-4);">
+        L'automatisation n'est pas réservée aux grandes équipes DevOps.
+        C'est ce qui rend une infrastructure fiable, reproductible et auditable,
+        quelle que soit sa taille.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="solution-title">
+  <div class="container" style="max-width:860px;">
+    <div class="reveal">
+      <p class="section-eyebrow">La solution</p>
+      <h2 id="solution-title">Votre infrastructure sous forme de code. Versionné, rejouable et maîtrisé</h2>
+      <p style="margin-top: var(--sp-4);">
+        Avec Ansible, chaque configuration devient du code : versionné, auditable, rejouable à l'identique.
+        Je conçois les playbooks adaptés à votre infrastructure et déploie Semaphore
+        comme interface de gestion web.
+      </p>
+      <p style="margin-top: var(--sp-4);">
+        Votre équipe peut déclencher un déploiement ou une mise à jour
+        sans toucher à une ligne de commande. L'infrastructure reste cohérente,
+        documentée et entre vos mains.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="deliverables-title">
+  <div class="container">
+    <div class="section__header reveal">
+      <p class="section-eyebrow">Périmètre de la prestation</p>
+      <h2 id="deliverables-title">Ce qui est inclus</h2>
+    </div>
+    <div class="deliverables reveal">
+      <div class="deliverable">
+        <i class="ti ti-code deliverable__icon" aria-hidden="true"></i>
+        <span class="deliverable__text">Conception et écriture des playbooks Ansible adaptés à votre contexte</span>
+      </div>
+      <div class="deliverable">
+        <i class="ti ti-layout-dashboard deliverable__icon" aria-hidden="true"></i>
+        <span class="deliverable__text">Déploiement et configuration de Semaphore (interface web)</span>
+      </div>
+      <div class="deliverable">
+        <i class="ti ti-git-branch deliverable__icon" aria-hidden="true"></i>
+        <span class="deliverable__text">Infrastructure as Code versionnée sur un dépôt Git (local ou distant)</span>
+      </div>
+      <div class="deliverable">
+        <i class="ti ti-users deliverable__icon" aria-hidden="true"></i>
+        <span class="deliverable__text">Formation de votre équipe à l'utilisation de Semaphore</span>
+      </div>
+      <div class="deliverable">
+        <i class="ti ti-books deliverable__icon" aria-hidden="true"></i>
+        <span class="deliverable__text">Documentation complète des rôles, variables et procédures</span>
+      </div>
+      <div class="deliverable">
+        <i class="ti ti-refresh deliverable__icon" aria-hidden="true"></i>
+        <span class="deliverable__text">Playbooks maintenables et évolutifs selon vos besoins futurs</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt" aria-labelledby="tech-title">
+  <div class="container" style="max-width:860px;">
+    <div class="reveal">
+      <p class="section-eyebrow">Technologies utilisées</p>
+      <h2 id="tech-title">Des outils Open Source éprouvés</h2>
+      <p style="margin-top: var(--sp-4);">
+        Ces technologies sont des outils au service du résultat, pas des produits vendus.
+        Elles sont choisies pour leur maturité, leur communauté active et leur absence de coût de licence.
+      </p>
+      <div class="tech-stack" style="margin-top: var(--sp-6);">
+        <span class="badge badge--neutral">Ansible</span>
+        <span class="badge badge--neutral">Semaphore</span>
+        <span class="badge badge--neutral">Git</span>
+        <span class="badge badge--neutral">Debian</span>
+        <span class="badge badge--orange">100 % Open Source</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-section" aria-labelledby="cta-title">
+  <div class="container" style="max-width:640px; text-align:center;">
+    <h2 id="cta-title">Une infrastructure qu'on déploie en quelques minutes, c'est une infrastructure qu'on maîtrise vraiment</h2>
+    <p>Parlons de votre contexte, je vous explique ce qu'on peut automatiser concrètement.</p>
+    <a href="/contact/" class="btn btn--cta-inverse btn--lg">Demander un devis</a>
+  </div>
+</section>
+  </main>
+  <footer class="footer" role="contentinfo">
+<div class="container">
+
+    <div class="footer__grid">
+
+    <div>
+        <a href="/" class="footer__logo" aria-label="WefficientIT — Accueil">
+        <span class="footer__logo-w">W</span><span class="footer__logo-rest">efficientIT</span>
+        </a>
+        <p class="footer__tagline">
+        Intégrateur Linux Open Source<br>
+        Infrastructure moderne pour les PME
+        </p>
+    </div>
+
+    <nav aria-label="Solutions">
+        <p class="footer__col-title">Solutions</p>
+        <ul class="footer__links" role="list">
+        <li><a href="/solutions/gestion-de-parc/" class="footer__link">Gestion de parc</a></li>
+        <li><a href="/solutions/infrastructure-linux/" class="footer__link">Infrastructure Linux</a></li>
+        <li><a href="/solutions/automatisation/" class="footer__link">Automatisation</a></li>
+        <li><a href="/solutions/virtualisation/" class="footer__link">Virtualisation</a></li>
+        <li><a href="/solutions/migration/" class="footer__link">Migration Open Source</a></li>
+        <li><a href="/solutions/securisation/" class="footer__link">Sécurisation réseau</a></li>
+        </ul>
+    </nav>
+
+    <nav aria-label="Navigation secondaire">
+        <p class="footer__col-title">Navigation</p>
+        <ul class="footer__links" role="list">
+        <li><a href="/methode/" class="footer__link">Méthode</a></li>
+        <li><a href="/documentation/" class="footer__link">Documentation</a></li>
+        <li><a href="/contact/" class="footer__link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div>
+        <p class="footer__col-title">Légal</p>
+        <ul class="footer__links" role="list">
+        <li><a href="/mentions-legales/" class="footer__link">Mentions légales</a></li>
+        <li><a href="/confidentialite/" class="footer__link">Confidentialité</a></li>
+        <li><a href="mailto:contact-it@wefficient.com" class="footer__link">contact-it@wefficient.com</a></li>
+        </ul>
+    </div>
+
+    </div>
+
+    <div class="footer__bottom">
+    <p class="footer__legal">
+        © 2025 WefficientIT — SARL —
+        <a href="/mentions-legales/">Mentions légales</a>
+    </p>
+    <p class="footer__legal">
+        Site propulsé par des technologies Open Source
+    </p>
+    </div>
+
+</div>
+</footer>
+  <script src="/assets/js/main.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,240 @@
+---
+layout: "base.njk"
+title: "Contact — WefficientIT"
+---
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container">
+    <p class="section-eyebrow">Prise de contact</p>
+    <h1 class="page-hero__title" id="page-title">Parlons de votre projet</h1>
+    <p class="page-hero__lead">
+      Pas besoin d'avoir tout défini. Décrivez-moi votre contexte en quelques lignes,
+      un premier échange suffit souvent à clarifier les besoins et identifier la bonne approche.
+    </p>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="contact-form-title">
+  <div class="container">
+
+    <div class="contact-layout" style="display:grid;grid-template-columns:1fr 360px;gap:var(--sp-16);align-items:start;">
+
+      <!-- Formulaire -->
+      <div>
+        <h2 class="sr-only" id="contact-form-title">Formulaire de contact</h2>
+        <form
+          class="form js-contact-form"
+          action="#"
+          method="POST"
+          novalidate
+          aria-label="Formulaire de demande de devis"
+        >
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="name">
+                Nom complet <abbr title="Champ obligatoire">*</abbr>
+              </label>
+              <input
+                class="form__input"
+                type="text"
+                id="name"
+                name="name"
+                autocomplete="name"
+                required
+                aria-required="true"
+              >
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="company">
+                Entreprise <abbr title="Champ obligatoire">*</abbr>
+              </label>
+              <input
+                class="form__input"
+                type="text"
+                id="company"
+                name="company"
+                autocomplete="organization"
+                required
+                aria-required="true"
+              >
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="email">
+                Adresse email <abbr title="Champ obligatoire">*</abbr>
+              </label>
+              <input
+                class="form__input"
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                aria-required="true"
+              >
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="phone">
+                Téléphone <span style="font-weight:400;color:var(--txt-tertiary);">(facultatif)</span>
+              </label>
+              <input
+                class="form__input"
+                type="tel"
+                id="phone"
+                name="phone"
+                autocomplete="tel"
+              >
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="project-type">
+              Type de projet
+            </label>
+            <select class="form__select" id="project-type" name="project_type">
+              <option value="">Sélectionner…</option>
+              <option value="gestion-de-parc">Gestion de parc informatique (GLPI)</option>
+              <option value="infrastructure-linux">Infrastructure Linux (Debian)</option>
+              <option value="automatisation">Automatisation (Ansible / Semaphore)</option>
+              <option value="virtualisation">Virtualisation (Proxmox)</option>
+              <option value="migration-open-source">Migration Open Source</option>
+              <option value="securisation">Sécurisation réseau (WireGuard)</option>
+              <option value="audit">Audit / Conseil</option>
+              <option value="autre">Autre / Je ne sais pas encore</option>
+            </select>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label" for="message">
+              Description du projet <abbr title="Champ obligatoire">*</abbr>
+            </label>
+            <textarea
+              class="form__textarea"
+              id="message"
+              name="message"
+              required
+              aria-required="true"
+              placeholder="Décrivez brièvement votre infrastructure actuelle, vos besoins et vos contraintes. Il n'est pas nécessaire d'avoir tout défini à ce stade."
+              style="min-height: 180px;"
+            ></textarea>
+          </div>
+
+          <div class="form__feedback form__feedback--success" role="alert" aria-live="polite">
+            <i class="ti ti-circle-check" aria-hidden="true"></i>
+            Votre demande a bien été envoyée. Je vous réponds sous 3 jours ouvrés.
+          </div>
+          <div class="form__feedback form__feedback--error" role="alert" aria-live="polite"></div>
+
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:var(--sp-5);">
+            <p class="form__gdpr" style="max-width:400px;">
+              Vos données sont utilisées uniquement pour répondre à votre demande.
+              Aucun démarchage commercial, aucun transfert à des tiers.
+              <a href="/confidentialite/">Politique de confidentialité</a>.
+            </p>
+            <button type="submit" class="btn btn--primary">
+              Envoyer ma demande
+              <svg class="btn__arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+              </svg>
+            </button>
+          </div>
+
+        </form>
+      </div>
+
+      <!-- Colonne informations -->
+      <aside aria-label="Informations pratiques">
+
+        <div style="
+          background: var(--bg-surface);
+          border-radius: var(--radius-xl);
+          padding: var(--sp-8);
+          margin-bottom: var(--sp-6);
+        ">
+          <h2 style="font-size:var(--text-lg);margin-bottom:var(--sp-6);">Ce à quoi vous pouvez vous attendre</h2>
+
+          <div style="display:flex;flex-direction:column;gap:var(--sp-5);">
+
+            <div style="display:flex;align-items:flex-start;gap:var(--sp-4);">
+              <div style="width:36px;height:36px;background:var(--clr-orange-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--clr-orange);font-size:18px;flex-shrink:0;" aria-hidden="true">
+                <i class="ti ti-clock"></i>
+              </div>
+              <div>
+                <p style="font-size:var(--text-sm);font-weight:var(--fw-semibold);color:var(--txt-primary);margin-bottom:var(--sp-1);">Réponse dans la semaine</p>
+                <p style="font-size:var(--text-xs);color:var(--txt-secondary);margin:0;line-height:1.5;">Je prends le temps de lire et réfléchir à votre demande avant de répondre.</p>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:flex-start;gap:var(--sp-4);">
+              <div style="width:36px;height:36px;background:var(--clr-orange-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--clr-orange);font-size:18px;flex-shrink:0;" aria-hidden="true">
+                <i class="ti ti-map-pin"></i>
+              </div>
+              <div>
+                <p style="font-size:var(--text-sm);font-weight:var(--fw-semibold);color:var(--txt-primary);margin-bottom:var(--sp-1);">Intervention à distance</p>
+                <p style="font-size:var(--text-xs);color:var(--txt-secondary);margin:0;line-height:1.5;">France entière. Les déplacements sur site sont possibles selon les projets.</p>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:flex-start;gap:var(--sp-4);">
+              <div style="width:36px;height:36px;background:var(--clr-orange-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--clr-orange);font-size:18px;flex-shrink:0;" aria-hidden="true">
+                <i class="ti ti-receipt"></i>
+              </div>
+              <div>
+                <p style="font-size:var(--text-sm);font-weight:var(--fw-semibold);color:var(--txt-primary);margin-bottom:var(--sp-1);">Devis au forfait</p>
+                <p style="font-size:var(--text-xs);color:var(--txt-secondary);margin:0;line-height:1.5;">Un prix fixe, défini avant de commencer. Aucune surprise.</p>
+              </div>
+            </div>
+
+            <div style="display:flex;align-items:flex-start;gap:var(--sp-4);">
+              <div style="width:36px;height:36px;background:var(--clr-orange-light);border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;color:var(--clr-orange);font-size:18px;flex-shrink:0;" aria-hidden="true">
+                <i class="ti ti-hand-stop"></i>
+              </div>
+              <div>
+                <p style="font-size:var(--text-sm);font-weight:var(--fw-semibold);color:var(--txt-primary);margin-bottom:var(--sp-1);">Aucun engagement</p>
+                <p style="font-size:var(--text-xs);color:var(--txt-secondary);margin:0;line-height:1.5;">Un premier échange ne vous engage à rien. Si le projet n'est pas faisable, je vous le dirai.</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Contact direct -->
+        <div style="
+          border: 1px solid var(--brd-default);
+          border-radius: var(--radius-xl);
+          padding: var(--sp-6);
+        ">
+          <p style="font-size:var(--text-sm);font-weight:var(--fw-semibold);color:var(--txt-primary);margin-bottom:var(--sp-4);">Vous préférez écrire directement ?</p>
+          <a
+            href="mailto:contact-it@wefficient.com"
+            class="btn btn--outline"
+            style="width:100%;justify-content:center;"
+          >
+            <i class="ti ti-mail" aria-hidden="true"></i>
+            contact-it@wefficient.com
+          </a>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Adaptation responsive de la colonne info -->
+<style>
+  @media (max-width: 1023px) {
+    .contact-layout { grid-template-columns: 1fr !important; }
+    .contact-layout {
+      grid-template-columns: 1fr !important;
+    }
+  }
+</style>
+<script>
+  // Applique la classe pour le responsive de la grille contact
+  document.querySelector('.contact-layout') && (
+    document.querySelector('.contact-layout').style.gridTemplateColumns = ''
+  );
+</script>
